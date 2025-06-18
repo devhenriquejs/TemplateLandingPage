@@ -1,5 +1,4 @@
-// src/components/ProblemSolution/index.tsx
-import React from 'react';
+
 import {
   StyledProblemSolutionSection,
   StyledSectionTitle,
