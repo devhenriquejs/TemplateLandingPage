@@ -14,18 +14,18 @@ import {
   StyledLabel,
   StyledErrorMessage,
   StyledSubmitButton,
-  StyledMessageModalOverlay, // Novo componente de modal
-  StyledMessageModalContent, // Novo componente de modal
-  StyledMessageModalHeader, // Novo componente de modal
-  StyledMessageModalText, // Novo componente de modal
-  StyledMessageModalCloseButton // Novo componente de modal
+  StyledMessageModalOverlay, 
+  StyledMessageModalContent, 
+  StyledMessageModalHeader, 
+  StyledMessageModalText, 
+  StyledMessageModalCloseButton 
 } from './styles';
 
 // 1. Definição do Schema de Validação com Zod
 // Aqui você define as regras para cada campo do seu formulário.
 const schema = z.object({
-  name: z.string().min(1, 'Nome é obrigatório'),
-  email: z.string().email('E-mail inválido').min(1, 'E-mail é obrigatório'),
+  name: z.string().min(4, 'Nome é obrigatório'),
+  email: z.string().email('E-mail inválido').min(4, 'E-mail é obrigatório'),
   // Telefone é opcional, mas se preenchido, deve seguir o padrão de 10 ou 11 dígitos numéricos
   phone: z.string().optional().refine(val => {
     if (!val) return true; // Permite que seja vazio
@@ -82,7 +82,7 @@ function FormContact() {
     // ATENÇÃO: Substitua 'SUA_URL_DO_WEBHOOK_ZAPIER_AQUI' pela URL real do seu Webhook do Zapier.
     // No Zapier, você criará um "Zap" com "Webhook Catch Hook" como gatilho (Trigger).
     // Ele te dará uma URL, cole ela aqui.
-    const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/SEU_ID_ZAPIER/SUA_CHAVE_AQUI/'; // Exemplo: https://hooks.zapier.com/hooks/catch/1234567/abcdefg/
+    const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/13507003/ubttieq/'; 
 
     try {
       const response = await fetch(ZAPIER_WEBHOOK_URL, {
