@@ -1,4 +1,5 @@
-
+// src/components/SocialProof/index.tsx
+import React from 'react';
 import {
   StyledSocialProofSection,
   StyledSectionTitle,
@@ -20,31 +21,32 @@ function SocialProof() {
     <StyledSocialProofSection>
       <StyledSectionTitle>O Que Nossos Clientes Dizem</StyledSectionTitle>
       <StyledTestimonialGrid>
-        {/* Depoimento principal */}
+        {/* Depoimento principal ajustado */}
         <StyledTestimonialHighlight>
-          <StyledQuoteText>"Desde que implementamos a landing page, nossa taxa de conversão aumentou em 40%! Trabalho incrível e super profissional. Recomendo de olhos fechados!"</StyledQuoteText>
+          <StyledQuoteText>"As Landing Pages que desenvolvemos ajudaram diversos profissionais a aumentar drasticamente suas taxas de conversão, transformando a captação de clientes em um processo eficiente e escalável."</StyledQuoteText>
           <StyledAuthorInfo>
             <StyledAuthorPhotoPlaceholder />
             <div>
-              <StyledAuthorName>Maria Silva</StyledAuthorName>
-              <StyledAuthorTitle>CEO, Startup X</StyledAuthorTitle>
+              {/* Remover nome e cargo fictícios, usar declarações genéricas */}
+              <StyledAuthorName>Experiência Validada no Mercado</StyledAuthorName>
+              <StyledAuthorTitle>Profissionais e Empresas Parceiras</StyledAuthorTitle>
             </div>
           </StyledAuthorInfo>
         </StyledTestimonialHighlight>
 
-        {/* Outros depoimentos menores */}
+        {/* Outros depoimentos menores ajustados */}
         <StyledSmallTestimonial>
-          <p>"Agilidade e qualidade! A LP ficou perfeita para o lançamento do meu curso."</p>
-          <StyledAuthorNameSmall>João Almeida</StyledAuthorNameSmall>
+          <p>"Nossos clientes relatam mais agendamentos e um público mais engajado após a implementação das soluções."</p>
+          <StyledAuthorNameSmall>Feedback Positivo Contínuo</StyledAuthorNameSmall>
         </StyledSmallTestimonial>
         <StyledSmallTestimonial>
-          <p>"Excelente suporte e resultados visíveis. Minha lista de e-mails cresceu muito!"</p>
-          <StyledAuthorNameSmall>Ana Costa</StyledAuthorNameSmall>
+          <p>"A clareza e o profissionalismo das páginas criadas geram confiança instantânea nos visitantes, levando a mais interações."</p>
+          <StyledAuthorNameSmall>Melhora na Percepção de Marca</StyledAuthorNameSmall>
         </StyledSmallTestimonial>
       </StyledTestimonialGrid>
       <StyledTrustSeal>
         <StyledSealIcon>🌟</StyledSealIcon>
-        <p>Mais de 100 clientes satisfeitos e crescendo!</p>
+        <p>Metodologia Comprovada para Transformar Sua Presença Online!</p>
       </StyledTrustSeal>
     </StyledSocialProofSection>
   );

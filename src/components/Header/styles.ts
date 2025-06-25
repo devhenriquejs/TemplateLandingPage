@@ -83,7 +83,7 @@ export const StyledHeaderImagePlaceholder = styled.div`
   justify-content: center;
 
   &::after {
-    content: "Selo de Autoridade";
+    content: "Especialista em Conversão Digital";
     position: absolute;
     top: 20px;
     right: 20px;

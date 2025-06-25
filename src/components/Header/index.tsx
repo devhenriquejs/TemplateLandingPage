@@ -13,9 +13,9 @@ function Header() {
         {/* Placeholder para imagem ou vídeo de fundo */}
       </StyledHeaderImagePlaceholder>
       <StyledHeaderContent>
-        <h1>Título Impactante da Hero Section</h1>
-        <p>Subtítulo ou Proposta de Valor Convincente que atraia seu público-alvo.</p>
-        <StyledCtaButton>Chamada para Ação Principal</StyledCtaButton>
+        <h1>Conquiste Mais Clientes Qualificados para Sua Consultoria ou Coaching</h1>
+        <p>Transforme Visitantes em Alunos e Clientes com Landing Pages Otimizadas para Alta Conversão. Chega de Perder Oportunidades!</p>
+        <StyledCtaButton>Quero Minha Landing Page de Sucesso!</StyledCtaButton>
       </StyledHeaderContent>
     </StyledHeader>
   );

@@ -15,10 +15,10 @@ import {
 function FormContact() {
   return (
     <StyledFormContactSection>
-      <StyledSectionTitle>Receba Material Exclusivo</StyledSectionTitle>
+      <StyledSectionTitle>Dê o Próximo Passo: Receba Nosso Guia Exclusivo!</StyledSectionTitle>
       <StyledFormCard> {/* Cartão flutuante */}
         <StyledFormIntroText>
-          Preencha o formulário e daremos o próximo passo para impulsionar seu negócio!
+          Preencha o formulário abaixo e receba gratuitamente nosso 'Guia Essencial: Como sua Landing Page pode Lançar seu Próximo Programa de Coaching com Sucesso!'. É o pontapé inicial para a sua jornada de conversão.
         </StyledFormIntroText>
         <StyledContactForm>
           <StyledFormGroup>
@@ -42,7 +42,7 @@ function FormContact() {
             <StyledErrorMessage className="error-placeholder"></StyledErrorMessage>
           </StyledFormGroup>
 
-          <StyledSubmitButton type="submit">Receber Material Exclusivo</StyledSubmitButton>
+          <StyledSubmitButton type="submit">Quero Receber o Guia Agora!</StyledSubmitButton>
         </StyledContactForm>
       </StyledFormCard>
     </StyledFormContactSection>

@@ -31,21 +31,21 @@ function Footer() {
         </StyledFooterColumn>
         <StyledFooterColumn>
           <h3>Contato</h3>
-          <p>contato@seuemail.com</p>
-          <p>(XX) XXXXX-XXXX</p>
+          <p>lh5818181@gmail.com</p>
+          <p>(81) 9 9942-9143</p>
           <StyledSocialIcons>
             <a href="#instagram" className="social-icon">📸</a>
             <a href="#linkedin" className="social-icon">🔗</a>
           </StyledSocialIcons>
         </StyledFooterColumn>
         <StyledFooterCallToAction>
-            <h3>Pronto para Alavancar seu Negócio?</h3>
-            <p>Entre em contato e vamos conversar sobre seus objetivos!</p>
-            <StyledCtaButtonFooter>Fale Conosco!</StyledCtaButtonFooter>
+            <h3>Pronto para Alavancar seu Negócio Digital?</h3>
+            <p>Vamos transformar sua presença online em uma máquina de captação de clientes. Entre em contato hoje mesmo!</p>
+            <StyledCtaButtonFooter>Fale Conosco e Comece!</StyledCtaButtonFooter>
         </StyledFooterCallToAction>
       </StyledFooterContent>
       <StyledFooterBottom>
-        <p>&copy; {new Date().getFullYear()} Seu Nome/Empresa. Todos os direitos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Luís Henrique. Todos os direitos reservados.</p>
       </StyledFooterBottom>
     </StyledFooterSection>
   );

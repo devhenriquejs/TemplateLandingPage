@@ -19,12 +19,12 @@ import {
 function AboutSection() {
   return (
     <StyledAboutSection>
-      <StyledSectionTitle>Sobre Mim / Nossa Empresa</StyledSectionTitle>
+      <StyledSectionTitle>Minha Trajetória: Criando Soluções Digitais para o Seu Sucesso</StyledSectionTitle>
       <StyledAboutContentWrapper>
         <StyledProfileDetails>
           <StyledProfilePhotoPlaceholder />
           <StyledBioText>
-            Olá! Sou Luís Henrique, um desenvolvedor full-stack em formação com paixão por criar experiências digitais dinâmicas e eficientes. Minhas habilidades em React, TypeScript, Figma e Canva me permitem construir soluções visuais e funcionais. Meu foco é ajudar negócios a prosperar online.
+            Olá! Sou Luís Henrique, um desenvolvedor apaixonado por criar pontes entre ideias e resultados. Com minha expertise em React, TypeScript e um olhar apurado para UI/UX, construo Landing Pages que não apenas encantam, mas, acima de tudo, geram valor real para coaches e consultores como você. Meu objetivo é transformar a sua visão em uma ferramenta digital de alta performance.
           </StyledBioText>
           <StyledMiniInfographic>
             <StyledInfoItem>
@@ -33,7 +33,7 @@ function AboutSection() {
             </StyledInfoItem>
             <StyledInfoItem>
               <StyledInfoNumber>20+</StyledInfoNumber>
-              <p>Projetos Entregues</p>
+              <p>Projetos de Sucesso</p>
             </StyledInfoItem>
           </StyledMiniInfographic>
         </StyledProfileDetails>
@@ -42,29 +42,29 @@ function AboutSection() {
           <StyledMilestoneEntry>
             <StyledMilestoneDot />
             <StyledMilestoneCard>
-              <h3>2018</h3>
-              <p>Início na jornada de desenvolvimento web, explorando HTML e CSS.</p>
-            </StyledMilestoneCard>
-          </StyledMilestoneEntry>
-          <StyledMilestoneEntry>
-            <StyledMilestoneDot />
-            <StyledMilestoneCard>
               <h3>2020</h3>
-              <p>Aprofundamento em Front-End, com foco em React e TypeScript.</p>
+              <p>Início na jornada de desenvolvimento web, construindo as bases com HTML e CSS.</p>
             </StyledMilestoneCard>
           </StyledMilestoneEntry>
           <StyledMilestoneEntry>
             <StyledMilestoneDot />
             <StyledMilestoneCard>
               <h3>2023</h3>
-              <p>Especialização em UI/UX Design, dominando Figma e Canva para prototipagem e identidade visual.</p>
+              <p>Aprofundamento em Front-End, com foco intenso em React e TypeScript, criando interfaces dinâmicas.</p>
+            </StyledMilestoneCard>
+          </StyledMilestoneEntry>
+          <StyledMilestoneEntry>
+            <StyledMilestoneDot />
+            <StyledMilestoneCard>
+              <h3>2024</h3>
+              <p>Aprofundamento em UI/UX Design, utilizando Figma e Canva para prototipagem e criação de identidades visuais impactantes.</p>
             </StyledMilestoneCard>
           </StyledMilestoneEntry>
           <StyledMilestoneEntry>
             <StyledMilestoneDot />
             <StyledMilestoneCard>
               <h3>2025</h3>
-              <p>Lançamento dos serviços de Landing Pages e soluções de automação personalizadas.</p>
+              <p>Lançamento dos serviços especializados em Landing Pages de Alta Conversão e automação para profissionais como coaches e consultores.</p>
             </StyledMilestoneCard>
           </StyledMilestoneEntry>
         </StyledMilestoneTimeline>
