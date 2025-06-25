@@ -5,7 +5,7 @@ const palette = {
   darkBlue: '#004AAD',
   midBlue: '#0096C7',
   lightBlue: '#48CAE4',
-  problemRed: '#FF6347' // Usando a cor de erro de antes
+  problemRed: '#FF6347' // Cor de erro
 };
 
 export const StyledFormContactSection = styled.section`
@@ -73,6 +73,12 @@ export const StyledInput = styled.input`
     border-color: ${palette.midBlue};
     box-shadow: 0 0 0 3px rgba(0, 150, 199, 0.2);
   }
+
+  /* Estilo para inputs com erro de validação */
+  &.input-error {
+    border-color: ${palette.problemRed};
+    box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.2);
+  }
 `;
 
 export const StyledErrorMessage = styled.span`
@@ -81,7 +87,6 @@ export const StyledErrorMessage = styled.span`
   margin-top: 5px;
   display: block;
   min-height: 1em; /* Garante que o layout não "pule" quando o erro aparece */
-  /* No futuro, este estilo pode ser condicional para aparecer/desaparecer */
 `;
 
 export const StyledSubmitButton = styled.button`
@@ -99,5 +104,64 @@ export const StyledSubmitButton = styled.button`
   &:hover {
     background-color: #002A80;
     transform: translateY(-2px);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+`;
+
+// --- Estilos para o Modal de Mensagem (Novo) ---
+export const StyledMessageModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Garante que fique acima de todo o conteúdo */
+  padding: 20px;
+`;
+
+export const StyledMessageModalContent = styled.div`
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border-top: 8px solid; /* A cor será definida via prop 'style' no TSX */
+  position: relative;
+`;
+
+export const StyledMessageModalHeader = styled.h3`
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 20px;
+`;
+
+export const StyledMessageModalText = styled.p`
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 30px;
+`;
+
+export const StyledMessageModalCloseButton = styled.button`
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ccc;
   }
 `;
