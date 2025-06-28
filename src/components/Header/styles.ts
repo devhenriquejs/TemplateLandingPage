@@ -10,7 +10,6 @@ const palette = {
 };
 
 export const StyledHeader = styled.header`
-  background-color: ${palette.darkBlue};
   color: #fff;
   padding: 80px 0;
   text-align: center;
@@ -76,7 +75,7 @@ export const StyledHeaderImagePlaceholder = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background: url('../../assets/images/notebook.jpg') center center/cover no-repeat, rgba(0, 0, 0, 0.2);
   z-index: 5;
   display: flex;
   align-items: center;

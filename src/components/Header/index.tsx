@@ -6,11 +6,11 @@ import {
   StyledHeaderImagePlaceholder
 } from './styles';
 
+
 function Header() {
   return (
     <StyledHeader>
       <StyledHeaderImagePlaceholder>
-        {/* Placeholder para imagem ou vídeo de fundo */}
       </StyledHeaderImagePlaceholder>
       <StyledHeaderContent>
         <h1>Conquiste Mais Clientes Qualificados para Sua Consultoria ou Coaching</h1>

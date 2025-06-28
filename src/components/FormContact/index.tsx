@@ -82,7 +82,7 @@ function FormContact() {
     // ATENÇÃO: Substitua 'SUA_URL_DO_WEBHOOK_ZAPIER_AQUI' pela URL real do seu Webhook do Zapier.
     // No Zapier, você criará um "Zap" com "Webhook Catch Hook" como gatilho (Trigger).
     // Ele te dará uma URL, cole ela aqui.
-    const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/13507003/ubttieq/'; 
+    const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/13507003/ubzgr32/'; 
 
     try {
       const response = await fetch(ZAPIER_WEBHOOK_URL, {
