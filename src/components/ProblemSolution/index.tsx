@@ -1,44 +1,41 @@
-
+import React from 'react';
 import {
-  StyledProblemSolutionSection,
-  StyledSectionTitle,
-  StyledContentWrapper,
-  StyledProblemsList,
-  StyledProblemItem,
-  StyledProblemIcon,
-  StyledTransitionArrow,
-  StyledSolutionBlock,
-  StyledSolutionIcon,
-  StyledSolutionText
+  StyledSection,
+  StyledTitle,
+  StyledStepperGrid,
+  StepCard,
+  StepNumber,
+  StepTitle,
+  Connector,
+  SolutionCard,
+  SolutionTitle,
+  SolutionButton
 } from './styles';
 
-function ProblemSolution() {
-  return (
-    <StyledProblemSolutionSection>
-      <StyledSectionTitle>Seus Desafios Digitais, Nossa Solução Estratégica</StyledSectionTitle>
-      <StyledContentWrapper>
-        <StyledProblemsList>
-          <StyledProblemItem>
-            <StyledProblemIcon>❌</StyledProblemIcon>
-            <p>Dificuldade em atrair o público certo para seus programas e serviços?</p>
-          </StyledProblemItem>
-          <StyledProblemItem>
-            <StyledProblemIcon>❌</StyledProblemIcon>
-            <p>Baixa taxa de agendamentos ou preenchimento de formulários no seu site atual?</p>
-          </StyledProblemItem>
-          <StyledProblemItem>
-            <StyledProblemIcon>❌</StyledProblemIcon>
-            <p>Sua presença online não transmite o profissionalismo e autoridade que você realmente tem?</p>
-          </StyledProblemItem>
-        </StyledProblemsList>
-        <StyledTransitionArrow /> {/* A seta/transição */}
-        <StyledSolutionBlock>
-          <StyledSolutionIcon>✅</StyledSolutionIcon>
-          <StyledSolutionText>Crie uma Landing Page que Converte, Gera Leads e Eleva Sua Autoridade no Mercado de Coaching e Consultoria.</StyledSolutionText>
-        </StyledSolutionBlock>
-      </StyledContentWrapper>
-    </StyledProblemSolutionSection>
-  );
-}
+const steps = [
+  'Público errado alcançado',
+  'Baixas inscrições em formulários',
+  'Marca sem autoridade digital'
+];
 
-export default ProblemSolution;
+export default function ProblemSolution() {
+  return (
+    <StyledSection>
+      <StyledTitle>Seus Desafios Digitais<span> &rarr; </span>Nossa Solução Estratégica</StyledTitle>
+      <StyledStepperGrid>
+        {steps.map((title, idx) => (
+          <StepCard key={idx}>
+            <StepNumber>{`0${idx + 1}`}</StepNumber>
+            <StepTitle>{title}</StepTitle>
+          </StepCard>
+        ))}
+        <Connector />
+        <SolutionCard>
+          <StepNumber isSolution>04</StepNumber>
+          <SolutionTitle>Landing Pages que Convertem e Elevam Sua Autoridade</SolutionTitle>
+          <SolutionButton>Vagas Limitadas! Quero Converter</SolutionButton>
+        </SolutionCard>
+      </StyledStepperGrid>
+    </StyledSection>
+);
+}

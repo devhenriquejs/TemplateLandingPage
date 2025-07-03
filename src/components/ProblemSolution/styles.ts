@@ -1,144 +1,114 @@
-// src/components/ProblemSolution/styles.ts
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const palette = {
   darkBlue: '#004AAD',
   midBlue: '#0096C7',
   lightBlue: '#48CAE4',
   veryLightBlue: '#ADE8F4',
-  problemRed: '#ff6347'
+  problemRed: '#E63946'
 };
 
-export const StyledProblemSolutionSection = styled.section`
+export const StyledSection = styled.section`
+  background: #fefefe;
+  padding: 80px 20px;
   text-align: center;
-  background-color: #fefefe;
-  padding: 60px 20px;
 `;
 
-export const StyledSectionTitle = styled.h2`
+export const StyledTitle = styled.h2`
   color: ${palette.darkBlue};
-  font-size: 2.5em;
+  font-size: 2em;
   margin-bottom: 40px;
-
-  @media (max-width: 768px) {
-    font-size: 2em;
-  }
+  span { color: ${palette.midBlue}; font-weight: bold; }
 `;
 
-export const StyledContentWrapper = styled.div`
-  display: flex;
-  flex-direction: column; /* Padrão para mobile */
+export const StyledStepperGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  gap: 30px;
-  max-width: 1200px; /* Adiciona um max-width para o conteúdo */
+  gap: 20px;
+  position: relative;
+  max-width: 1200px;
   margin: 0 auto;
 
-  @media (min-width: 768px) {
-    flex-direction: row; /* Colunas para desktop */
-    justify-content: center;
-    gap: 50px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 `;
 
-export const StyledProblemsList = styled.div`
+export const StepCard = styled.div`
+  background: ${palette.darkBlue};
+  border-radius: 12px;
+  padding: 32px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  max-width: 400px;
+  align-items: center;
+  gap: 12px;
 `;
 
-export const StyledProblemItem = styled.div`
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-left: 5px solid ${palette.problemRed}; /* Cor para problemas */
-  padding: 15px;
-  border-radius: 8px;
-  text-align: left;
+export const StepNumber = styled.div<{ isSolution?: boolean }>`
+  background-color: ${({ isSolution }) => (isSolution ? palette.lightBlue : palette.problemRed)};
+  color: #fff;
+  font-weight: bold;
+  width: ${({ isSolution }) => (isSolution ? '48px' : '36px')};
+  height: ${({ isSolution }) => (isSolution ? '48px' : '36px')};
+  border-radius: 50%;
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+`;
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+export const StepTitle = styled.p`
+  color: #333;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0;
+`;
+
+export const Connector = styled.div`
+  grid-column: span 4;
+  height: 2px;
+  background: linear-gradient(to right, ${palette.problemRed}, ${palette.midBlue});
+  margin: 0 40px;
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
-export const StyledProblemIcon = styled.span`
-  font-size: 1.5em;
-  line-height: 1;
-  flex-shrink: 0;
-`;
-
-export const StyledTransitionArrow = styled.div`
-  width: 3px;
-  height: 60px; /* Altura da seta no mobile */
-  background-color: ${palette.midBlue}; /* Cor da seta */
-  position: relative;
-  margin: 20px 0;
-  border-radius: 2px;
-
-  &::after {
-    content: '';
-    position: absolute;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 15px solid ${palette.midBlue};
-    bottom: -15px;
-    left: -8.5px; /* Ajuste para centralizar a ponta da seta */
-  }
-
-  @media (min-width: 768px) {
-    width: 60px; /* Largura da seta no desktop */
-    height: 3px;
-    margin: 0 20px;
-
-    &::after {
-      border-left: 15px solid ${palette.midBlue};
-      border-right: 0;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      top: -8.5px;
-      right: -15px;
-      left: auto;
-    }
-  }
-`;
-
-export const StyledSolutionBlock = styled.div`
-  background-color: ${palette.veryLightBlue}; /* Cor clara de solução */
-  border: 1px solid #cceeff;
-  border-left: 5px solid ${palette.midBlue}; /* Cor de solução */
-  padding: 25px;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: left;
+export const SolutionCard = styled.div`
+  background: linear-gradient(135deg, ${palette.veryLightBlue} 0%, ${palette.lightBlue} 100%);
+  border-radius: 12px;
+  padding: 32px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: scale(1.02);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-  }
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 `;
 
-export const StyledSolutionIcon = styled.span`
-  font-size: 1.8em;
-  line-height: 1;
-  color: ${palette.midBlue};
-  flex-shrink: 0;
-`;
-
-export const StyledSolutionText = styled.p`
+export const SolutionTitle = styled.h3`
+  color: ${palette.darkBlue};
   font-size: 1.1em;
   font-weight: bold;
-  color: ${palette.darkBlue};
-  margin: 0; /* Remove margem padrão de parágrafo */
+  margin: 0;
+  line-height: 1.4;
+`;
+
+export const SolutionButton = styled.button`
+  background-color: ${palette.midBlue};
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(0, 150, 199, 0.4);
+  }
 `;
