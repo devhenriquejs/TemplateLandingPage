@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import fundoProblems from '../../assets/images/FUNDO - ProblemSolution - 2.png';
 
 const palette = {

@@ -1,5 +1,4 @@
 // src/components/SocialProof/index.tsx
-import React from 'react';
 import {
   StyledSocialProofSection,
   StyledSectionTitle,
