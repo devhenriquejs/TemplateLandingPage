@@ -3,13 +3,12 @@ import notebook from '../../assets/images/notebook.jpg';
 
 // Definindo a paleta de cores para consistência
 const palette = {
-  darkBlue: '#004AAD',
-  midBlue: '#0096C7',
-  lightBlue: '#48CAE4',
-  lightGray: 'F0F4F8',
-  veryLightBlue: '#ADE8F4',
-  moreVeryLightBlue: '#9EDCF9',
-  brightBlue: '#00A8E8',
+  midnightBlue: '#0A2540',        // cor de fundo escuro
+  blueRibbon: '#0057FF',          // cor de destaque média
+  skyBlue: '#00CFFF',             // cor clara suave
+  saffron: '#FFD700',             // amarelo de atenção
+  gunmetal: '#1F2A36',            // sobreposição escura
+  lightGray: '#F0F4F8'            // cinza claro para textos
 };
 
 // Header com background e overlay
@@ -28,7 +27,7 @@ export const StyledHeader = styled.header`
     right: 0;
     bottom: 0;
     background: 
-      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+      linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.2)),
       url(${notebook}) center center/cover no-repeat;
     z-index: -1;
   }
@@ -43,9 +42,9 @@ export const StyledBadge = styled.span`
   position: absolute;
   top: 40px;
   left: 70px;
-  background-color: ${palette.moreVeryLightBlue}; 
+  background-color: ${palette.saffron};
   border: 1px solid rgba(0, 0, 0, 0.1);
-  color: #333;
+  color: ${palette.midnightBlue};
   padding: 8px 14px;
   border-radius: 4px;
   font-size: 0.9em;
@@ -61,14 +60,14 @@ export const StyledBadge = styled.span`
 
 // Conteúdo principal do header
 export const StyledHeaderContent = styled.div`
-    position: relative;
-    z-index: 10;
-    max-width: 760px;
-    padding: 0 70px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    align-items: flex-start;
+  position: relative;
+  z-index: 10;
+  max-width: 760px;
+  padding: 0 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: flex-start;
 
   h1 {
     font-size: 2.7em;
@@ -76,7 +75,7 @@ export const StyledHeaderContent = styled.div`
     line-height: 1.08;
     font-weight: 800;
     letter-spacing: -1px;
-    text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
   }
 
   p {
@@ -86,7 +85,7 @@ export const StyledHeaderContent = styled.div`
     color: ${palette.lightGray};
     line-height: 1.6;
     font-weight: 400;
-    text-shadow: 0 1px 8px rgba(0,0,0,0.10);
+    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
   }
 
   @media (max-width: 1024px) {
@@ -109,20 +108,19 @@ export const StyledHeaderContent = styled.div`
 
 // Botão CTA com hover e animação
 export const StyledCtaButton = styled.button`
-  background-color: ${palette.brightBlue};
+  background-color: ${palette.blueRibbon};
   color: white;
   padding: 15px 30px;
   border: none;
-  border-radius: 5px;
-  text-decoration: none;
+  border-radius: 6px;
   font-weight: bold;
   display: inline-block;
   cursor: pointer;
   transition: all 0.2s ease;
 
   &:hover {
-    background-color: ${palette.brightBlue};
-    transform: scale(1.03);
-    box-shadow: 0 0 15px rgba(0, 168, 232, 0.6);
+    background-color: ${palette.skyBlue};
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 207, 255, 0.6);
   }
 `;
