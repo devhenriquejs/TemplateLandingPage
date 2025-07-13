@@ -1,26 +1,32 @@
-import { FileText, Shield, User, Zap } from 'lucide-react';
-import icon1 from '../../assets/images/Icon1 (1).png';
+import { HiOutlineUser, HiOutlineDocumentText, HiOutlineShieldCheck, HiOutlineLightningBolt } from 'react-icons/hi';
+
+
+import number1 from '../../assets/images/number1.png';
+import number2 from '../../assets/images/number2.png';
+import number3 from '../../assets/images/number3.png';
+import number4 from '../../assets/images/number4.png';
 
 import { Connector, SolutionButton, SolutionCard, SolutionDesc, SolutionIcon, SolutionNumber, SolutionTitle, StepCard, StepDesc, StepIcon, StepNumber, StepTitle, StyledSection, StyledStepperGrid, StyledTitle } from './styles';
 
+
 // Array de imagens
-const stepIcons = [icon1];
+const stepIcons = [number1, number2, number3];
 
 const steps = [
   {
     title: 'Audiência Qualificada',
     desc: 'Alcance quem realmente importa.',
-    icon: <User size={32} />
+    icon: <HiOutlineUser size={32} />
   },
   {
     title: 'Geração de Leads',
     desc: 'Converta cliques em contatos.',
-    icon: <FileText size={32} />
+    icon: <HiOutlineDocumentText size={32} />
   },
   {
     title: 'Autoridade Digital',
     desc: 'Seja referência no seu nicho.',
-    icon: <Shield size={32} />
+    icon: <HiOutlineShieldCheck size={32} />
   }
 ];
 
@@ -41,8 +47,8 @@ export default function ProblemSolution() {
         ))}
         <Connector />
         <SolutionCard>
-          <SolutionNumber>04</SolutionNumber>
-          <SolutionIcon><Zap size={32} /></SolutionIcon>
+          <SolutionNumber src={number4}/>
+          <SolutionIcon><HiOutlineLightningBolt size={32} /></SolutionIcon>
           <SolutionTitle>Solução Premium</SolutionTitle>
           <SolutionDesc>Landing Pages que vendem sozinhas.</SolutionDesc>
           <SolutionButton>Vagas Limitadas! Quero Converter</SolutionButton>
