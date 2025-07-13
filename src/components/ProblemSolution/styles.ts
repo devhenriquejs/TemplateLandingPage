@@ -83,17 +83,15 @@ export const StepCard = styled.div<{ accent: number }>`
   }
 `;
 
-export const StepNumber = styled.div`
-  background-color: #fff;
-  color: ${palette.midnightBlue};
-  font-weight: bold;
+export const StepNumber = styled.img`
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  object-fit: cover;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1em;
 `;
 
 export const StepIcon = styled.div`

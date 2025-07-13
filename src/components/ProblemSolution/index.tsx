@@ -1,21 +1,10 @@
-import { User, FileText, Shield, Zap } from 'lucide-react';
-import {
-  StyledSection,
-  StyledTitle,
-  StyledStepperGrid,
-  StepCard,
-  StepNumber,
-  StepIcon,
-  StepTitle,
-  StepDesc,
-  Connector,
-  SolutionCard,
-  SolutionNumber,
-  SolutionIcon,
-  SolutionTitle,
-  SolutionDesc,
-  SolutionButton
-} from './styles';
+import { FileText, Shield, User, Zap } from 'lucide-react';
+import icon1 from '../../assets/images/Icon1 (1).png';
+
+import { Connector, SolutionButton, SolutionCard, SolutionDesc, SolutionIcon, SolutionNumber, SolutionTitle, StepCard, StepDesc, StepIcon, StepNumber, StepTitle, StyledSection, StyledStepperGrid, StyledTitle } from './styles';
+
+// Array de imagens
+const stepIcons = [icon1];
 
 const steps = [
   {
@@ -44,7 +33,7 @@ export default function ProblemSolution() {
       <StyledStepperGrid>
         {steps.map((step, idx) => (
           <StepCard key={idx} accent={idx}>
-            <StepNumber>{`0${idx + 1}`}</StepNumber>
+            <StepNumber src={stepIcons[idx]} />
             <StepIcon>{step.icon}</StepIcon>
             <StepTitle>{step.title}</StepTitle>
             <StepDesc>{step.desc}</StepDesc>
